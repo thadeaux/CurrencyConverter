@@ -38,11 +38,11 @@
                                             <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="IdV-kO-G76">
                                                 <rect key="frame" x="0.0" y="20.333333333333343" width="155" height="79.333333333333329"/>
                                                 <subviews>
-                                                    <textField opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="248" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" borderStyle="roundedRect" textAlignment="center" minimumFontSize="24" translatesAutoresizingMaskIntoConstraints="NO" id="Yzg-cF-rN5">
+                                                    <textField opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="248" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" borderStyle="roundedRect" minimumFontSize="24" translatesAutoresizingMaskIntoConstraints="NO" id="Yzg-cF-rN5">
                                                         <rect key="frame" x="0.0" y="23" width="155" height="34"/>
                                                         <autoresizingMask key="autoresizingMask" flexibleMinX="YES" widthSizable="YES" flexibleMaxX="YES" flexibleMinY="YES" flexibleMaxY="YES"/>
                                                         <color key="backgroundColor" systemColor="systemGray4Color"/>
-                                                        <fontDescription key="fontDescription" type="system" pointSize="19"/>
+                                                        <nil key="textColor"/>
                                                         <textInputTraits key="textInputTraits"/>
                                                     </textField>
                                                 </subviews>
@@ -60,6 +60,9 @@
                                             </label>
                                             <switch opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="750" verticalHuggingPriority="750" contentHorizontalAlignment="center" contentVerticalAlignment="center" on="YES" translatesAutoresizingMaskIntoConstraints="NO" id="9qz-VU-H4n">
                                                 <rect key="frame" x="79" y="34.333333333333314" width="51" height="31"/>
+                                                <connections>
+                                                    <action selector="eurSwitch:" destination="BYZ-38-t0r" eventType="valueChanged" id="UUk-Iv-ibd"/>
+                                                </connections>
                                             </switch>
                                         </subviews>
                                     </stackView>
@@ -74,6 +77,9 @@
                                             </label>
                                             <switch opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="750" verticalHuggingPriority="750" contentHorizontalAlignment="center" contentVerticalAlignment="center" on="YES" translatesAutoresizingMaskIntoConstraints="NO" id="ixH-Rl-UjP">
                                                 <rect key="frame" x="79" y="34.333333333333314" width="51" height="31"/>
+                                                <connections>
+                                                    <action selector="jpySwitch:" destination="BYZ-38-t0r" eventType="valueChanged" id="cL9-Lq-0GB"/>
+                                                </connections>
                                             </switch>
                                         </subviews>
                                     </stackView>
@@ -88,6 +94,9 @@
                                             </label>
                                             <switch opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="750" verticalHuggingPriority="750" contentHorizontalAlignment="center" contentVerticalAlignment="center" on="YES" translatesAutoresizingMaskIntoConstraints="NO" id="42J-rw-Ya7">
                                                 <rect key="frame" x="79" y="34.666666666666686" width="51" height="31"/>
+                                                <connections>
+                                                    <action selector="gbpSwitch:" destination="BYZ-38-t0r" eventType="valueChanged" id="BJy-ci-K9F"/>
+                                                </connections>
                                             </switch>
                                         </subviews>
                                     </stackView>
@@ -102,6 +111,9 @@
                                             </label>
                                             <switch opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="750" verticalHuggingPriority="750" contentHorizontalAlignment="center" contentVerticalAlignment="center" on="YES" translatesAutoresizingMaskIntoConstraints="NO" id="C3E-0n-Y6b">
                                                 <rect key="frame" x="79" y="34.333333333333258" width="51" height="31"/>
+                                                <connections>
+                                                    <action selector="audSwitch:" destination="BYZ-38-t0r" eventType="valueChanged" id="l1f-Od-hzA"/>
+                                                </connections>
                                             </switch>
                                         </subviews>
                                     </stackView>
@@ -115,6 +127,9 @@
                                             </backgroundConfiguration>
                                             <color key="baseForegroundColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                         </buttonConfiguration>
+                                        <connections>
+                                            <action selector="convertButton:" destination="BYZ-38-t0r" eventType="touchUpInside" id="4Vp-ET-O3T"/>
+                                        </connections>
                                     </button>
                                 </subviews>
                                 <constraints>
@@ -137,6 +152,9 @@
                             <constraint firstItem="6Tk-OE-BBY" firstAttribute="bottom" secondItem="1TE-2v-qJb" secondAttribute="bottom" constant="30" id="zbo-jL-tcv"/>
                         </constraints>
                     </view>
+                    <connections>
+                        <outlet property="currencyInput" destination="pn7-vi-qwT" id="IR4-eb-n01"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
             </objects>
