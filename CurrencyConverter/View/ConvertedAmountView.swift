@@ -25,14 +25,35 @@ class ConvertedAmountView: UIViewController {
     var jpyAmount = ""
     var gbpAmount = ""
     var audAmount = ""
+    var eurSwitch = true
+    var jpySwitch = true
+    var gbpSwitch = true
+    var audSwitch = true
     
     override func viewDidLoad() {
         super.viewDidLoad()
-        usdLabel.text = "Amount in USD: $ \(usdAmount)"
-        //convertedEUR.text = "EUR: \(eurAmount)"
-        //convertedJPY.text = "JPY: \(jpyAmount)"
-        //convertedGBP.text = "GBP: \(gbpAmount)"
-        //convertedAUD.text = "AUD: \(audAmount)"
+        usdLabel.text = "Amount in USD: $\(usdAmount)"
+        if eurSwitch {
+            convertedEUR.text = "EUR: \(eurAmount)"
+        } else {
+            convertedEUR.isHidden = true
+        }
+        if jpySwitch {
+            convertedJPY.text = "JPY: \(jpyAmount)"
+        } else {
+            convertedJPY.isHidden = true
+        }
+        if gbpSwitch {
+            convertedGBP.text = "GBP: \(gbpAmount)"
+        } else {
+            convertedGBP.isHidden = true
+        }
+        if audSwitch {
+            convertedAUD.text = "AUD: \(audAmount)"
+        } else {
+            convertedAUD.isHidden = true
+        }
+        
 
         // Do any additional setup after loading the view.
     }
